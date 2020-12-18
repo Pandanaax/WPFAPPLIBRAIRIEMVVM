@@ -1,0 +1,16 @@
+﻿<Page x:Class="WpfAppLibrairieMVVM.View.PageNouveauLivre"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppLibrairieMVVM.View"
+      mc:Ignorable="d"
+      Title="PageNouveauLivre" Width="471.742" Height="444.495">
+
+    <Grid Background="#FF65BCCD" Margin="0,0,0.2,-0.4" Height="450" VerticalAlignment="Top">
+        <ComboBox x:Name="cbbListeLivreSource" Margin="319,159,13.8,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="Titre" HorizontalAlignment="Left" Margin="0,16,0,0" VerticalAlignment="Top" Height="31" Width="79" FontSize="14"/>
+        <TextBlock Text="{Binding ElementName=cbbListeLivreSource, Path=SelectedItem}" HorizontalAlignment="Left" Margin="106,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Foreground="#FF0C0C0C" Background="#FFA1EBE2" Height="22" FontSize="14"/>
+        <Image Source="{Binding ElementName=cbbListeLivreSource, Path=SelectedItem}" HorizontalAlignment="Left" Height="144" Margin="319,10,0,0" VerticalAlignment="Top" Width="139"/>
+    </Grid>
+</Page>
